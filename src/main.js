@@ -5,7 +5,7 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const table_scraper = require('table-scraper');
 
-const URL = 'http://www.foot-national.com/partage.php?type=2&id=1';
+const URL_CLASSEMENT = 'http://www.foot-national.com/partage.php?type=2&id=1';
 
 
 client.once('ready', () => {
@@ -14,7 +14,7 @@ client.once('ready', () => {
 
 client.on('message', msg => {
     if (msg.content === 'nat') {
-        table_scraper.get(URL).then(
+        table_scraper.get(URL_CLASSEMENT).then(
                function (datas) {
                    let classement = '```';
                    let datasFormat = ([].concat(...datas)).shift();
