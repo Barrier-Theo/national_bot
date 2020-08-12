@@ -17,19 +17,15 @@ client.on('message', msg => {
         table_scraper.get(URL).then(
                function (datas) {
                    let classement = '```';
-                   let array1D = [].concat(...datas);
-                   array1D.shift();
+                   let datasFormat = ([].concat(...datas)).shift();
 
-                    array1D.forEach(function(object, index, array){
+                   datasFormat.forEach(function(object, index, array){
                         classement  += object['0'] + '\t' + object['1'] + '\t ' + object['2'] + '\t' + object['3'] + '\t' + object['4'] + '\t' + object['5'] + '\n';
                    });
-
-                    classement += '```';
-                    msg.channel.send(classement);
-
+                   classement += '```';
+                   msg.channel.send(classement);
                }
-           );
-
+        );
     }
 });
 
