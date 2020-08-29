@@ -2,8 +2,6 @@ const tokenFile = require("../config.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const table_scraper = require("table-scraper");
-const utf8 = require('utf8');
-const iconv = require('iconv');
 
 const URL_CLASSEMENT =  "http://www.foot-national.com/partage.php?type=2&id=1 ";
 
