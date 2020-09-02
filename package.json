@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "child_process": "^1.0.2",
+    "convertapi": "^1.6.0",
     "discord.js": "^12.2.0",
     "iconv": "^3.0.0",
     "js": "^0.1.0",
